@@ -1,0 +1,19 @@
+<h2>Introducir los campos de las personas</h2>
+<form (submit)="submit()" id=formulario [formGroup]="registerForm">
+  <input type="hidden" id="id">
+  <label for="Usuario">Usuario</label> <input type="text" name="usuario" formControlName="usuario">
+  <label for="Apellido">Apellido</label> <input type="text" name="apellido" formControlName="surname">
+  <label for="Contraseña">Contraseña</label> <input type="password" name="contraseña" formControlName="password">
+  <label for="Nombre">Nombre</label> <input type="text" name="nombre" formControlName="name">
+  <label for="EmailCompañia ">Email de la compañia</label> <input type="email" name="emailCompañia" formControlName="company_email">
+  <label for="EmailPersonal">Email personal</label> <input type="email" name="emailPersonal" formControlName="personal_email">
+  <label for="Ciudad">Ciudad</label> <input type="text" name="Ciudad" formControlName="city">
+  <label for="urlImagen">url de la imagen</label> <input type="url" name="urlImagen" formControlName="imagen_url">
+  <label for="FechaCreacion">Fecha creacion</label> <input type="datetime" name="fechaCreacion" formControlName="created_date"><br>
+  <label for="Activado">Activado</label> <input type="checkbox" name="activado" formControlName="active"><br>
+  <label for="FechaFinalizacion">Fecha finalizacion</label> <input type="datetime" name="fechaFinalizacion" formControlName="termination_date">
+  <div class="buttonHolder">
+    <input type="submit" id="Enviar" value="Enviar">
+  </div>
+</form>
+<button (click)="goBack()">Volver</button>
