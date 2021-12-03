@@ -1,0 +1,8 @@
+<ul>
+    <div class="container">
+        <li *ngFor="let persona of personas">
+            <app-tarjeta [persona]="persona" (personaBorrada)="borrarPersona($event)"></app-tarjeta>
+        </li>
+    </div>
+</ul>
+

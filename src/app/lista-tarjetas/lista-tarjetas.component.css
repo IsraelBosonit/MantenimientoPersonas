@@ -1,0 +1,7 @@
+li {
+    list-style-type: none;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+  }

@@ -6,16 +6,22 @@ import { PersonasComponent } from './personas/personas.component';
 import { PersonaDetalleComponent } from './persona-detalle/persona-detalle.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table'
-import {MatButtonModule} from '@angular/material/button';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InicioComponent } from './inicio/inicio.component';
+import { MenuComponent } from './menu/menu.component';
+import { TarjetaComponent } from './tarjeta/tarjeta.component';
+import { ListaTarjetasComponent } from './lista-tarjetas/lista-tarjetas.component';
 const routes: Routes = [
-  { path: '', redirectTo: '/personas', pathMatch: 'full' },
+  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'personas', component: PersonasComponent },
   { path: 'añadir', component: ReactiveFormComponent },
   { path: 'modificar/:id', component: ReactiveFormComponent },
+  { path: 'inicio', component: InicioComponent},
+  { path: 'listaTarjetas', component: ListaTarjetasComponent }
 ];
 
 @NgModule({
@@ -24,6 +30,10 @@ const routes: Routes = [
     PersonasComponent,
     ReactiveFormComponent,
     PersonaDetalleComponent,
+    InicioComponent,
+    MenuComponent,
+    TarjetaComponent,
+    ListaTarjetasComponent,
   
   ],
   imports: [
@@ -31,7 +41,6 @@ const routes: Routes = [
     MatTableModule,
     MatButtonModule,
     MatDialogModule,
-
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,

@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-name">
+        <p>{{persona.name}} {{persona.surname}}</p>
+    </div>
+    <img src="assets/user.png" class="card-image">
+   
+    <p>Usuario: {{persona.usuario}}</p>
+    <p>Ciudad: {{persona.city}}</p>
+    <p>Email Comp: {{persona.company_email}}</p>
+
+    <div class="botones">
+        <button class="btn" (click)="deletePersona(persona)">Dar baja</button>
+        <button class="btn" routerLink="/modificar/{{persona.id_persona}}">Modificar</button>
+    </div>
+</div>
